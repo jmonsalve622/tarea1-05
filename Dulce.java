@@ -1,10 +1,6 @@
-abstract public class Dulce {
-    private int serie;
+abstract public class Dulce extends Producto {
     public Dulce(int s) {
-        serie = s;
-    }
-    public int getSerie() {
-        return serie;
+        super(s);
     }
     public abstract String comer();
 }
