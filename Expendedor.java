@@ -30,46 +30,95 @@ public class Expendedor {
         monVu = new Deposito<Moneda>();
     }
 
-    public Producto comprarProducto(Moneda m, int select) throws RuntimeException {
+    public Producto comprarProducto(Moneda m, Seleccion select) throws RuntimeException {
         if (m == null) {
             throw new PagoIncorrectoException("");
         }
-        //Agregar el exception para cuando el pago es insufiiciente
         switch (select) {
-            case 1:
+            case COCASELECCION:
                 if (coca.empty()) {
                     monVu.add(m);
                     throw new NoHayProductoException("");
                 }
-                //Agregar el vuelto al deposito de monedas
+                Precios precio1 = Precios.COCAPRECIO;
+                if (m.getValor() < precio1.getPrecio()) {
+                    monVu.add(m);
+                    throw new PagoInsuficienteException("");
+                }
+                if (m.getValor() > precio1.getPrecio()) {
+                    int vuelto = m.getValor() - precio1.getPrecio();
+                    for (int i = 0; i < vuelto/100; i++) {
+                        monVu.add(new Moneda100());
+                    }
+                }
                 return coca.get();
-            case 2:
+            case SPRITESELECCION:
                 if (sprite.empty()) {
                     monVu.add(m);
                     throw new NoHayProductoException("");
                 }
-                //Agregar el vuelto al deposito de monedas
+                Precios precio2 = Precios.SPRITEPRECIO;
+                if (m.getValor() < precio2.getPrecio()) {
+                    monVu.add(m);
+                    throw new PagoInsuficienteException("");
+                }
+                if (m.getValor() > precio2.getPrecio()) {
+                    int vuelto = m.getValor() - precio2.getPrecio();
+                    for (int i = 0; i < vuelto/100; i++) {
+                        monVu.add(new Moneda100());
+                    }
+                }
                 return sprite.get();
-            case 3:
+            case FANTASELECCION:
                 if (fanta.empty()) {
                     monVu.add(m);
                     throw new NoHayProductoException("");
                 }
-                //Agregar el vuelto al deposito de monedas
+                Precios precio3 = Precios.FANTAPRECIO;
+                if (m.getValor() < precio3.getPrecio()) {
+                    monVu.add(m);
+                    throw new PagoInsuficienteException("");
+                }
+                if (m.getValor() > precio3.getPrecio()) {
+                    int vuelto = m.getValor() - precio3.getPrecio();
+                    for (int i = 0; i < vuelto/100; i++) {
+                        monVu.add(new Moneda100());
+                    }
+                }
                 return fanta.get();
-            case 4:
+            case SNICKERSSELECCION:
                 if (snickers.empty()) {
                     monVu.add(m);
                     throw new NoHayProductoException("");
                 }
-                //Agregar el vuelto al deposito de monedas
+                Precios precio4 = Precios.SNICKERSPRECIO;
+                if (m.getValor() < precio4.getPrecio()) {
+                    monVu.add(m);
+                    throw new PagoInsuficienteException("");
+                }
+                if (m.getValor() > precio4.getPrecio()) {
+                    int vuelto = m.getValor() - precio4.getPrecio();
+                    for (int i = 0; i < vuelto/100; i++) {
+                        monVu.add(new Moneda100());
+                    }
+                }
                 return snickers.get();
-            case 5:
+            case SUPER8SELECCION:
                 if (super8.empty()) {
                     monVu.add(m);
                     throw new NoHayProductoException("");
                 }
-                //Agregar el vuelto al deposito de monedas
+                Precios precio5 = Precios.SUPER8PRECIO;
+                if (m.getValor() < precio5.getPrecio()) {
+                    monVu.add(m);
+                    throw new PagoInsuficienteException("");
+                }
+                if (m.getValor() > precio5.getPrecio()) {
+                    int vuelto = m.getValor() - precio5.getPrecio();
+                    for (int i = 0; i < vuelto/100; i++) {
+                        monVu.add(new Moneda100());
+                    }
+                }
                 return super8.get();
             default:
                 monVu.add(m);
