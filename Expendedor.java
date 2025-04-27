@@ -72,6 +72,7 @@ public class Expendedor {
                 //Agregar el vuelto al deposito de monedas
                 return super8.get();
             default:
+                monVu.add(m);
                 throw new SeleccionFueraDeRangoException("");
         }
     }
