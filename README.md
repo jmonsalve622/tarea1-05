@@ -1,3 +1,3 @@
 # tarea1-05
-#ni
-#gg
+Joaquín Alonso Monsalve Luengo
+Cristóbal Ignacio Valenzuela Escobar
