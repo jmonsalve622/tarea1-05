@@ -38,30 +38,35 @@ public class Expendedor {
         switch (select) {
             case 1:
                 if (coca.empty()) {
+                    monVu.add(m);
                     throw new NoHayProductoException("");
                 }
                 //Agregar el vuelto al deposito de monedas
                 return coca.get();
             case 2:
                 if (sprite.empty()) {
+                    monVu.add(m);
                     throw new NoHayProductoException("");
                 }
                 //Agregar el vuelto al deposito de monedas
                 return sprite.get();
             case 3:
                 if (fanta.empty()) {
+                    monVu.add(m);
                     throw new NoHayProductoException("");
                 }
                 //Agregar el vuelto al deposito de monedas
                 return fanta.get();
             case 4:
                 if (snickers.empty()) {
+                    monVu.add(m);
                     throw new NoHayProductoException("");
                 }
                 //Agregar el vuelto al deposito de monedas
                 return snickers.get();
             case 5:
                 if (super8.empty()) {
+                    monVu.add(m);
                     throw new NoHayProductoException("");
                 }
                 //Agregar el vuelto al deposito de monedas
