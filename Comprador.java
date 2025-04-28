@@ -3,7 +3,7 @@ public class Comprador{
   private int vuelto;
 
   public Comprador(Moneda m, int select, Expendedor ex){
-      e= new ex.comprarProducto;
+      e= new ex.comprarProducto;       #"aca falta definir que objeto sera e "
       vuelto=0;
       Moneda v;
       while((v= ex.getVuelto()) != null){
