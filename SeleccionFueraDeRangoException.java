@@ -1,5 +1,5 @@
 public class SeleccionFueraDeRangoException extends RuntimeException {
-    public SeleccionFueraDeRangoException(String errorMessage) {
-        super(errorMessage);
+    public SeleccionFueraDeRangoException() {
+        super("No existe un producto para el número ingresado");
     }
 }
