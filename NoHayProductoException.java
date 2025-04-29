@@ -1,5 +1,5 @@
 public class NoHayProductoException extends RuntimeException {
-    public NoHayProductoException(String errorMessage) {
-        super(errorMessage);
+    public NoHayProductoException() {
+        super("El deposito del producto solicitado esta vacío");
     }
 }
