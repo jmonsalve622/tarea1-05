@@ -4,18 +4,8 @@ public class Comprador {
 
   public Comprador(Moneda m, Seleccion select, Expendedor e) {
     Producto p = e.comprarProducto(m, select);
-    if (m.getValor() == select.getPrecio())
-      
-
-
-
-
-    
-    vuelto=0;
-      Moneda v;
-      while((v= ex.getVuelto()) != null){
-          vuelto += ex.getVuelto;
-      }
+    sonido = p.consumir();
+    //Agregar el calculo del vuelto
   }
   public int cuantoVuelto() {
       return vuelto;
