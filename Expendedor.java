@@ -32,21 +32,21 @@ public class Expendedor {
 
     public Producto comprarProducto(Moneda m, Seleccion select) throws RuntimeException {
         if (m == null) {
-            throw new PagoIncorrectoException("");
+            throw new PagoIncorrectoException();
         }
+
         switch (select) {
             case COCASELECCION:
                 if (coca.empty()) {
                     monVu.add(m);
-                    throw new NoHayProductoException("");
+                    throw new NoHayProductoException();
                 }
-                Precios precio1 = Precios.COCAPRECIO;
-                if (m.getValor() < precio1.getPrecio()) {
+                if (m.getValor() < Precios.COCAPRECIO.getPrecio()) {
                     monVu.add(m);
-                    throw new PagoInsuficienteException("");
+                    throw new PagoInsuficienteException();
                 }
-                if (m.getValor() > precio1.getPrecio()) {
-                    int vuelto = m.getValor() - precio1.getPrecio();
+                if (m.getValor() > Precios.COCAPRECIO.getPrecio()) {
+                    int vuelto = m.getValor() - Precios.COCAPRECIO.getPrecio();
                     for (int i = 0; i < vuelto/100; i++) {
                         monVu.add(new Moneda100());
                     }
@@ -55,15 +55,14 @@ public class Expendedor {
             case SPRITESELECCION:
                 if (sprite.empty()) {
                     monVu.add(m);
-                    throw new NoHayProductoException("");
+                    throw new NoHayProductoException();
                 }
-                Precios precio2 = Precios.SPRITEPRECIO;
-                if (m.getValor() < precio2.getPrecio()) {
+                if (m.getValor() < Precios.SPRITEPRECIO.getPrecio()) {
                     monVu.add(m);
-                    throw new PagoInsuficienteException("");
+                    throw new PagoInsuficienteException();
                 }
-                if (m.getValor() > precio2.getPrecio()) {
-                    int vuelto = m.getValor() - precio2.getPrecio();
+                if (m.getValor() > Precios.SPRITEPRECIO.getPrecio()) {
+                    int vuelto = m.getValor() - Precios.SPRITEPRECIO.getPrecio();
                     for (int i = 0; i < vuelto/100; i++) {
                         monVu.add(new Moneda100());
                     }
@@ -72,15 +71,14 @@ public class Expendedor {
             case FANTASELECCION:
                 if (fanta.empty()) {
                     monVu.add(m);
-                    throw new NoHayProductoException("");
+                    throw new NoHayProductoException();
                 }
-                Precios precio3 = Precios.FANTAPRECIO;
-                if (m.getValor() < precio3.getPrecio()) {
+                if (m.getValor() < Precios.FANTAPRECIO.getPrecio()) {
                     monVu.add(m);
-                    throw new PagoInsuficienteException("");
+                    throw new PagoInsuficienteException();
                 }
-                if (m.getValor() > precio3.getPrecio()) {
-                    int vuelto = m.getValor() - precio3.getPrecio();
+                if (m.getValor() > Precios.FANTAPRECIO.getPrecio()) {
+                    int vuelto = m.getValor() - Precios.FANTAPRECIO.getPrecio();
                     for (int i = 0; i < vuelto/100; i++) {
                         monVu.add(new Moneda100());
                     }
@@ -89,15 +87,14 @@ public class Expendedor {
             case SNICKERSSELECCION:
                 if (snickers.empty()) {
                     monVu.add(m);
-                    throw new NoHayProductoException("");
+                    throw new NoHayProductoException();
                 }
-                Precios precio4 = Precios.SNICKERSPRECIO;
-                if (m.getValor() < precio4.getPrecio()) {
+                if (m.getValor() < Precios.SNICKERSPRECIO.getPrecio()) {
                     monVu.add(m);
-                    throw new PagoInsuficienteException("");
+                    throw new PagoInsuficienteException();
                 }
-                if (m.getValor() > precio4.getPrecio()) {
-                    int vuelto = m.getValor() - precio4.getPrecio();
+                if (m.getValor() > Precios.SNICKERSPRECIO.getPrecio()) {
+                    int vuelto = m.getValor() - Precios.SNICKERSPRECIO.getPrecio();
                     for (int i = 0; i < vuelto/100; i++) {
                         monVu.add(new Moneda100());
                     }
@@ -106,15 +103,14 @@ public class Expendedor {
             case SUPER8SELECCION:
                 if (super8.empty()) {
                     monVu.add(m);
-                    throw new NoHayProductoException("");
+                    throw new NoHayProductoException();
                 }
-                Precios precio5 = Precios.SUPER8PRECIO;
-                if (m.getValor() < precio5.getPrecio()) {
+                if (m.getValor() < Precios.SUPER8PRECIO.getPrecio()) {
                     monVu.add(m);
-                    throw new PagoInsuficienteException("");
+                    throw new PagoInsuficienteException();
                 }
-                if (m.getValor() > precio5.getPrecio()) {
-                    int vuelto = m.getValor() - precio5.getPrecio();
+                if (m.getValor() > Precios.SUPER8PRECIO.getPrecio()) {
+                    int vuelto = m.getValor() - Precios.SUPER8PRECIO.getPrecio();
                     for (int i = 0; i < vuelto/100; i++) {
                         monVu.add(new Moneda100());
                     }
@@ -122,7 +118,7 @@ public class Expendedor {
                 return super8.get();
             default:
                 monVu.add(m);
-                throw new SeleccionFueraDeRangoException("");
+                throw new SeleccionFueraDeRangoException();
         }
     }
 
