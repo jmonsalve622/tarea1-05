@@ -2,5 +2,5 @@ abstract public class Bebida extends Producto {
     public Bebida(int s) {
         super(s);
     }
-    public abstract String beber();
+    public abstract String consumir();
 }
