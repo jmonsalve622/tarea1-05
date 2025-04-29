@@ -1,19 +1,27 @@
-public class Comprador{
+public class Comprador {
   private String sonido;
   private int vuelto;
 
-  public Comprador(Moneda m, int select, Expendedor ex){
-      vuelto=0;
+  public Comprador(Moneda m, Seleccion select, Expendedor e) {
+    Producto p = e.comprarProducto(m, select);
+    if (m.getValor() == select.getPrecio())
+      
+
+
+
+
+    
+    vuelto=0;
       Moneda v;
       while((v= ex.getVuelto()) != null){
           vuelto += ex.getVuelto;
       }
   }
-  public int cuantoVuelto(){
+  public int cuantoVuelto() {
       return vuelto;
   }
 
-  public String queBebiste(){
+  public String queCompraste() {
       return sonido;
   }
 }
