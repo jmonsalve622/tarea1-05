@@ -35,25 +35,33 @@ public class Main1 {
     c = new Comprador(m,s,exp);
     System.out.println(c.queCompraste()+", "+c.cuantoVuelto());
 
+    
+    //este codigo es para probar excepcion "PagoIncorrectoexcepcion"
     //m = null;
-    //ps.add(m);                              //este codigo es para probar excepcion "PagoIncorrectoexcepcion"
+    //ps.add(m);                              
     //c = new Comprador(m,s,exp);
     //System.out.println(c.queCompraste()+", "+c.cuantoVuelto());
 
 
+    
+    //este codigo es para probar la excepcion "PagoInsuficienteException"
     //m = new Moneda100();
-    //ps.add(m);                              //este codigo es para probar la excepcion "PagoInsuficienteException"
+    //ps.add(m);                              
     //c = new Comprador(m,s,exp);
     //System.out.println(c.queCompraste()+", "+c.cuantoVuelto());
 
+
+    
+    //El deposito de CocaCola tiene 2 bebidad para ofrecer, este es el segundo que da para que la siguiente vez que pida Coca, ya no haya
     //s = new Selleccion.COCACOLASELECCION;
     //m = new Moneda1000();
-    //ps.add(m);                              //El deposito de CocaCola tiene 2 bebidad para ofrecer, este es el segundo que da para que la siguiente vez que pida Coca, ya no haya
+    //ps.add(m);                              
     //c = new Comprador(m,s,exp);
     //System.out.println(c.queCompraste()+", "+c.cuantoVuelto());
-    
+
+    //este codigo es para probar la excepcion "NoHayProductoException"
     //m = new Moneda1000();                    
-    //ps.add(m);                              //este codigo es para probar la excepcion "NoHayProductoException"
+    //ps.add(m);                              
     //c = new Comprador(m,s,exp);
     //System.out.println(c.queCompraste()+", "+c.cuantoVuelto());
 
