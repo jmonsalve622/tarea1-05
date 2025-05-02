@@ -1,5 +1,3 @@
-import java.util.Collections;
-
 abstract public class Moneda implements Comparable<Moneda>{
     public Moneda() {}
     public Moneda getSerie() {
