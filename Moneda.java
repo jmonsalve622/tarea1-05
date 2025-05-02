@@ -9,7 +9,7 @@ abstract public class Moneda implements Comparable<Moneda>{
 
     @Override
     public String toString(){
-        return ""+this.getValor;
+        return ""+this.getValor();
     }    
 
     @Override
