@@ -5,7 +5,10 @@ public class Comprador {
   public Comprador(Moneda m, Seleccion select, Expendedor e) {
     Producto p = e.comprarProducto(m, select);
     sonido = p.consumir();
-    //Agregar el calculo del vuelto
+    vuelto = 0;
+    while (e.hayVuelto()) {
+        vuelto += e.getVuelto().getValor();
+    }
   }
   public int cuantoVuelto() {
       return vuelto;
