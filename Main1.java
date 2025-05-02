@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class Main{
+public class Main1{
     public static void main(String[] args) {
         Expendedor exp = new Expendedor(2);
         Moneda m=null;
