@@ -56,7 +56,7 @@ public class Main{
 
 
         //El deposito de CocaCola tiene 2 bebidad para ofrecer, este es el segundo que da para que la siguiente vez que pida Coca, ya no haya
-        //s = new Seleccion.COCACOLASELECCION;
+        //s = new Seleccion.COCASELECCION;
         //m = new Moneda1000();
         //ps.add(m);
         //c = new Comprador(m,s,exp);
