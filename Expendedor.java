@@ -130,4 +130,13 @@ public class Expendedor {
             return null;
         }
     }
+
+    public boolean hayVuelto() {
+        if (!monVu.empty()) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
 }
